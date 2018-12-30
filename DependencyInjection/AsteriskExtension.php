@@ -43,7 +43,7 @@ class AsteriskExtension extends Extension
             
             $definition = new Definition(
                 ClientImpl::class,
-                ['options' => new Parameter(sprintf('asterisk.ami_connection.%s', $client['connection']))]
+                ['$options' => new Parameter(sprintf('asterisk.ami_connection.%s', $client['connection']))]
             );
             
             if ($client['logger_channel']) {
